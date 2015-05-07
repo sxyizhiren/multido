@@ -1,6 +1,6 @@
 {
   "name": "multido",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "create a group of job/executor",
   "main": "lib/main.js",
   "directories": {

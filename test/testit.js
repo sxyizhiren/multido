@@ -40,7 +40,7 @@ setTimeout(function(){
 setTimeout(function(){
 	assert.equal(errgroup.getState(),true);
 	assert.equal(errgroup.getName(),'TESTITERR');
-	errgroup.setTotalErrorTryTime(1);
+	errgroup.setErrorTryCnt(1);
 },500);
 
 
