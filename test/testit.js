@@ -19,9 +19,9 @@ group.push('ANY');
 group.push('ANY');
 group.push('ANY');
 group.run();
-assert.equal(group.getState(),true);
+assert.equal(group.getState(),'BUSY');
 /////////////////////////////////
-var errgroup=Multido(3,{name:'TESTITERR'},workerWithErr);
+var errgroup=Multido(3,{name:'TESTITERR', errTryCnt:10},workerWithErr);
 errgroup.push('ANY');
 errgroup.push('ANY');
 errgroup.push('ANY');
@@ -29,19 +29,23 @@ errgroup.push('ANY');
 errgroup.push('ANY');
 errgroup.push('ANY');
 errgroup.run();
-assert.equal(errgroup.getState(),true);
+assert.equal(errgroup.getState(),'BUSY');
 /////////////////////////////////
 
 setTimeout(function(){
-	assert.equal(group.getState(),false);
+	assert.equal(group.getState(),'IDLE');
 	assert.equal(group.getName(),'TESTIT');
-},500);
+},10);
 
 setTimeout(function(){
-	assert.equal(errgroup.getState(),true);
+	assert.equal(errgroup.getState(),'BUSY');
 	assert.equal(errgroup.getName(),'TESTITERR');
-	errgroup.setErrorTryCnt(1);
-},500);
+},1999);
+
+setTimeout(function(){
+	assert.equal(errgroup.getState(),'IDLE');
+	assert.equal(errgroup.getName(),'TESTITERR');
+},3000);
 
 
 

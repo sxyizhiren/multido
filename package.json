@@ -1,13 +1,12 @@
 {
   "name": "multido",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "create a group of job/executor",
   "main": "lib/main.js",
   "directories": {
     "test": "test"
   },
   "dependencies": {
-    "async": "^0.9.0"
   },
   "devDependencies": {},
   "scripts": {
