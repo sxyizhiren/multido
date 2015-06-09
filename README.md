@@ -1,4 +1,8 @@
 #multido
+- [![NPM version](https://badge.fury.io/js/multido.png)](http://badge.fury.io/js/multido)
+- [![Dependencies Status](https://david-dm.org/sxyizhiren/multido.png)](https://david-dm.org/sxyizhiren/multido)
+- [![Build Status](https://travis-ci.org/sxyizhiren/multido.png?branch=master)](https://travis-ci.org/sxyizhiren/multido)
+
 
 create a work group, work group can run job with same action but different parameter.
 
