@@ -27,8 +27,12 @@ var worker=function(param,callback){
     // callback(err);
 	process.nextTick(callback);
 }
+// errTryCnt, if worker pass error to callback, then group will retry errTryCnt times at most. if not set, will retry forever.
+// name, set a name for this group, can use group.getName() to get it back. if not set, will equal to empty string '';
 var option = {errTryCnt:3,name:'test_group'};
-var group = new Multido(3,option,worker);
+// limit , allowed threads to run worker at the same time. 
+var limit = 3;
+var group = new Multido(limit,option,worker);
 
 group.push(param1);
 group.push(param2);
