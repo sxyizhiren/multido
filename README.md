@@ -2,7 +2,8 @@
 - [![NPM version](https://badge.fury.io/js/multido.png)](http://badge.fury.io/js/multido)
 - [![Dependencies Status](https://david-dm.org/sxyizhiren/multido.png)](https://david-dm.org/sxyizhiren/multido)
 - [![Build Status](https://travis-ci.org/sxyizhiren/multido.png?branch=master)](https://travis-ci.org/sxyizhiren/multido)
-
+- [![NPM Stats](https://nodei.co/npm/multido.png?downloads=true&stars=true)](https://npmjs.org/package/multido)
+- [![NPM Downloads](https://nodei.co/npm-dl/multido.png?months=6)](https://npmjs.org/package/multido)
 
 create a work group, work group can run job with same action but different parameter.
 
