@@ -2,11 +2,13 @@ var Multido=require('../lib/main');
 var assert=require('assert');
 
 var worker=function(param,callback){
+	assert.equal('ANY',param);
 	process.nextTick(callback);
 }
 
 var workerWithErr=function(param,callback){
-	var err=new Error('AnyError');
+	assert.equal('ANY',param);
+	var err=new Error('AnyError is Expected.');
 	setTimeout(callback,100,err);
 }
 
